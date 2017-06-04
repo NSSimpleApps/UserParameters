@@ -6,5 +6,6 @@ target 'UserParameters' do
   use_frameworks!
 
   pod 'SnapKit'
+  pod 'AlamofireImage'
 
 end

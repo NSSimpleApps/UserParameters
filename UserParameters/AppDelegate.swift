@@ -44,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.userProfile = UserProfile(header: header, parameters: parameters)
         self.userProfileViewModel = UserProfileViewModel(userProfile: self.userProfile)
         
+        self.userProfileViewController.editUserProfileViewController.headerType = .imageLabel
         self.userProfileViewController.editUserProfileViewController.viewModel = self.userProfileViewModel
         self.userProfileViewController.navigationItem.leftBarButtonItem =
             UIBarButtonItem(title: "Изменить", style: .plain, target: self, action: #selector(self.editUserProfile(_:)))
@@ -60,6 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.userProfileViewModel.canEdit = true
         
         let editUserProfileViewController = EditUserProfileViewController(style: .grouped)
+        editUserProfileViewController.headerType = .image
         editUserProfileViewController.viewModel = self.userProfileViewModel
         editUserProfileViewController.navigationItem.rightBarButtonItem =
             UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.saveUserProfile(_:)))

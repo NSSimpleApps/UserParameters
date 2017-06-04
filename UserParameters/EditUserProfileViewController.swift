@@ -8,15 +8,50 @@
 
 import UIKit
 
+extension ImageHeaderView: ImageHeaderProtocol {}
+extension ImageLabelHeaderView: ImageLabelHeaderProtocol {}
+
 open class EditUserProfileViewController: UITableViewController {
     
+    public enum HeaderType {
+        
+        case none
+        case imageLabel
+        case image
+    }
+    
     open var viewModel: UserProfileProtocol!
+    open var headerType: HeaderType = .none
     
     override open func viewDidLoad() {
         
         super.viewDidLoad()
 
         self.tableView.register(UserProfileCell.self, forCellReuseIdentifier: String(describing: UserProfileCell.self))
+        
+        let tableHeaderView: UIView?
+        
+        switch self.headerType {
+        
+        case .imageLabel:
+            let imageLabelHeaderView = ImageLabelHeaderView()
+            self.viewModel.configureImageLabelHeader(imageLabelHeaderView)
+            imageLabelHeaderView.frame.size = imageLabelHeaderView.intrinsicContentSize
+            
+            tableHeaderView = imageLabelHeaderView
+            
+        case .image:
+            let imageHeaderView = ImageHeaderView()
+            self.viewModel.configureImageHeader(imageHeaderView)
+            imageHeaderView.frame.size = imageHeaderView.intrinsicContentSize
+            
+            tableHeaderView = imageHeaderView
+            
+        default:
+            tableHeaderView = nil
+        }
+        
+        self.tableView.tableHeaderView = tableHeaderView
     }
     
     override open func numberOfSections(in tableView: UITableView) -> Int {

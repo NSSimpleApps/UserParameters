@@ -15,17 +15,22 @@ public protocol UserParameterProtocol {
     var textField: UITextField { get }
 }
 
-public protocol UserHeaderProtocol {
+public protocol ImageHeaderProtocol: class {
     
-    var label: UILabel { get }
     var imageView: UIImageView { get }
     var backgroundColor: UIColor? { get set }
+}
+
+public protocol ImageLabelHeaderProtocol: ImageHeaderProtocol {
+    
+    var label: UILabel { get }
 }
 
 public protocol UserProfileProtocol {
     
     var numberOfRows: Int { get }
-    func configureHeader(_ header: UserHeaderProtocol)
+    func configureImageHeader(_ header: ImageHeaderProtocol)
+    func configureImageLabelHeader(_ header: ImageLabelHeaderProtocol)
     func configureCell(_ cell: UserParameterProtocol, at indexPath: IndexPath)
 }
 
@@ -43,6 +48,10 @@ open class UserProfileViewController: UIViewController {
         self.view.backgroundColor = .white
         self.edgesForExtendedLayout = []
         
+        self.button.setTitle("Выход", for: .normal)
+        self.button.setTitleColor(UIColor.red, for: .normal)
+        self.button.setTitleColor(UIColor.lightGray, for: .highlighted)
+        
         self.view.addSubview(self.button)
         
         let buttonContainer = self.button.snp
@@ -52,7 +61,7 @@ open class UserProfileViewController: UIViewController {
             maker.bottom.equalTo(self.bottomLayoutGuide.snp.top)
             maker.height.equalToSuperview().multipliedBy(CGFloat(59.5)/667)
         }
-        
+
         let separator = UIView()
         separator.backgroundColor = .black
         

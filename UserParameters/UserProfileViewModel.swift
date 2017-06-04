@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 
 open class UserProfileViewModel {
@@ -40,14 +42,37 @@ open class UserProfileViewModel {
 
 extension UserProfileViewModel: UserProfileProtocol {
     
+    public func configureImageLabelHeader(_ header: ImageLabelHeaderProtocol) {
+        
+        header.backgroundColor = UIColor.green
+        header.label.text = self.userProfile.header.title
+        
+        self.setImage(from: self.userProfile.header.url,
+                      imageView: header.imageView)
+    }
+
+    public func configureImageHeader(_ header: ImageHeaderProtocol) {
+        
+        header.backgroundColor = UIColor.green
+        
+        self.setImage(from: self.userProfile.header.url,
+                      imageView: header.imageView)
+    }
+    
+    private func setImage(from url: String, imageView: UIImageView) {
+        
+        Alamofire.request(self.userProfile.header.url).responseImage { response in
+            
+            if let image = response.result.value {
+                
+                imageView.image = image
+            }
+        }
+    }
+    
     public var numberOfRows: Int {
         
         return self.userProfile.parameters.count
-    }
-    
-    public func configureHeader(_ header: UserHeaderProtocol) {
-        
-        
     }
     
     public func configureCell(_ cell: UserParameterProtocol, at indexPath: IndexPath) {
