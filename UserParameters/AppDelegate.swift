@@ -75,6 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.userProfileViewController.dismiss(animated: true) {
             
+            self.userProfileViewModel.canEdit = false
             self.userProfileViewController.reloadData()
         }        
     }
