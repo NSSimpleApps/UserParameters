@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIBarButtonItem(title: "Изменить", style: .plain, target: self, action: #selector(self.editUserProfile(_:)))
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = userProfileViewController.embedInNavigationController()
+        self.window?.rootViewController = self.userProfileViewController.embedInNavigationController()
         self.window?.makeKeyAndVisible()
         
         return true

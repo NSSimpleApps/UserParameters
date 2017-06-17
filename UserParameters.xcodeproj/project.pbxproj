@@ -16,6 +16,8 @@
 		B56EA38C1EE193D1006CA25E /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56EA38B1EE193D1006CA25E /* UserProfileViewController.swift */; };
 		B56EA3901EE198E8006CA25E /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56EA38F1EE198E8006CA25E /* UserProfileCell.swift */; };
 		B56EA3921EE1A3C9006CA25E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56EA3911EE1A3C9006CA25E /* UserProfile.swift */; };
+		B5CC402C1EF4EB16002053FA /* SubtitleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CC402B1EF4EB16002053FA /* SubtitleTableViewController.swift */; };
+		B5CC402E1EF4EB2C002053FA /* SubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CC402D1EF4EB2C002053FA /* SubtitleTableViewCell.swift */; };
 		B5D54E0D1EE3F524008074DD /* TextFieldHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D54E0C1EE3F524008074DD /* TextFieldHandler.swift */; };
 		B5D54E101EE3FBD7008074DD /* ImageLabelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D54E0F1EE3FBD7008074DD /* ImageLabelHeaderView.swift */; };
 		B5D54E121EE3FBE5008074DD /* ImageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D54E111EE3FBE5008074DD /* ImageHeaderView.swift */; };
@@ -34,6 +36,8 @@
 		B56EA38B1EE193D1006CA25E /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		B56EA38F1EE198E8006CA25E /* UserProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
 		B56EA3911EE1A3C9006CA25E /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		B5CC402B1EF4EB16002053FA /* SubtitleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewController.swift; sourceTree = "<group>"; };
+		B5CC402D1EF4EB2C002053FA /* SubtitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		B5D54E0C1EE3F524008074DD /* TextFieldHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldHandler.swift; sourceTree = "<group>"; };
 		B5D54E0E1EE3FBBE008074DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B5D54E0F1EE3FBD7008074DD /* ImageLabelHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLabelHeaderView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				B5D54E0C1EE3F524008074DD /* TextFieldHandler.swift */,
 				B5D54E0F1EE3FBD7008074DD /* ImageLabelHeaderView.swift */,
 				B5D54E111EE3FBE5008074DD /* ImageHeaderView.swift */,
+				B5CC402B1EF4EB16002053FA /* SubtitleTableViewController.swift */,
+				B5CC402D1EF4EB2C002053FA /* SubtitleTableViewCell.swift */,
 			);
 			path = UserParameters;
 			sourceTree = "<group>";
@@ -234,11 +240,13 @@
 				B56EA3901EE198E8006CA25E /* UserProfileCell.swift in Sources */,
 				B56EA3921EE1A3C9006CA25E /* UserProfile.swift in Sources */,
 				B5D54E0D1EE3F524008074DD /* TextFieldHandler.swift in Sources */,
+				B5CC402E1EF4EB2C002053FA /* SubtitleTableViewCell.swift in Sources */,
 				B56A83E61EE26851009D08C9 /* UserProfileViewModel.swift in Sources */,
 				B5D54E101EE3FBD7008074DD /* ImageLabelHeaderView.swift in Sources */,
 				B56EA38C1EE193D1006CA25E /* UserProfileViewController.swift in Sources */,
 				B56EA37A1EE192D7006CA25E /* AppDelegate.swift in Sources */,
 				B56A83E81EE27130009D08C9 /* EditUserProfileViewController.swift in Sources */,
+				B5CC402C1EF4EB16002053FA /* SubtitleTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
