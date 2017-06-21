@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 extension ImageHeaderView: ImageHeaderProtocol {}
 extension ImageLabelHeaderView: ImageLabelHeaderProtocol {}
@@ -29,14 +30,16 @@ open class EditUserProfileViewController: UITableViewController {
         
         let v = UIView()
         v.backgroundColor = .red
-        v.translatesAutoresizingMaskIntoConstraints = false
         
         self.tableView.addSubview(v)
         
-        v.bottomAnchor.constraint(equalTo: self.tableView.topAnchor).isActive = true
-        v.widthAnchor.constraint(equalTo: self.tableView.widthAnchor).isActive = true
-        v.heightAnchor.constraint(equalToConstant: 10000).isActive = true
-        
+        v.snp.makeConstraints { (maker) in
+            
+            maker.bottom.equalTo(self.tableView.snp.top)
+            maker.centerX.equalToSuperview()
+            maker.width.equalToSuperview()
+            maker.height.equalTo(10000)
+        }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { 
             
