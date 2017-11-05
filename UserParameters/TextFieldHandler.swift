@@ -13,7 +13,7 @@ open class TextFieldHandler: NSObject {
     open var canEdit = false
     open var textFieldChangedBlock: ((UITextField) -> Void)?
     
-    open func textFieldChanged(_ sender: UITextField) {
+    @objc open func textFieldChanged(_ sender: UITextField) {
         
         self.textFieldChangedBlock?(sender)
     }

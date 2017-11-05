@@ -23,7 +23,7 @@ class SubtitleTableViewCell: UITableViewCell {
         
         self.topLabel.font = UIFont.systemFont(ofSize: 12)
         self.topLabel.textColor = UIColor.lightGray
-        self.topLabel.setContentHuggingPriority(UILayoutPriorityDefaultLow + 1, for: .vertical)
+        self.topLabel.setContentHuggingPriority(UILayoutPriority(UILayoutPriority.defaultLow.rawValue + 1), for: .vertical)
         
         self.contentView.addSubview(self.topLabel)
         
@@ -39,7 +39,7 @@ class SubtitleTableViewCell: UITableViewCell {
         self.bottomLabel.lineBreakMode = .byTruncatingTail
         self.bottomLabel.font = UIFont.systemFont(ofSize: 15)
         self.bottomLabel.textColor = UIColor.darkGray
-        self.bottomLabel.setContentHuggingPriority(UILayoutPriorityDefaultLow, for: .vertical)
+        self.bottomLabel.setContentHuggingPriority(UILayoutPriority(UILayoutPriority.defaultLow.rawValue + 1), for: .vertical)
         
         self.contentView.addSubview(self.bottomLabel)
         

@@ -32,6 +32,7 @@ open class EditUserProfileViewController: UITableViewController {
         v.backgroundColor = .red
         
         self.tableView.addSubview(v)
+        self.tableView.rowHeight = 44
         
         v.snp.makeConstraints { (maker) in
             

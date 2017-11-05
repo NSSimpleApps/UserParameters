@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func editUserProfile(_ sender: UIBarButtonItem) {
+    @objc func editUserProfile(_ sender: UIBarButtonItem) {
         
         self.userProfileViewModel.canEdit = true
         
@@ -71,7 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController?.present(nc, animated: true, completion: nil)
     }
     
-    func saveUserProfile(_ sender: UIBarButtonItem) {
+    @objc func saveUserProfile(_ sender: UIBarButtonItem) {
         
         self.userProfileViewController.dismiss(animated: true) {
             
