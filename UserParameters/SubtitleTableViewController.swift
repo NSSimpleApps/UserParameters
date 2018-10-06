@@ -27,7 +27,7 @@ class SubtitleTableViewController: UITableViewController {
         
         self.tableView.register(SubtitleTableViewCell.self, forCellReuseIdentifier: String(describing: SubtitleTableViewCell.self))
         self.tableView.estimatedRowHeight = 50
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.rowHeight = UITableView.automaticDimension
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

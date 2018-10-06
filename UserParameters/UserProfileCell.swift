@@ -9,12 +9,12 @@
 import UIKit
 import SnapKit
 
-open class UserProfileCell: UITableViewCell {
+public class UserProfileCell: UITableViewCell {
     
-    open let label = UILabel()
-    open let textField = UITextField()
+    public let label = UILabel()
+    public let textField = UITextField()
     
-    public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         

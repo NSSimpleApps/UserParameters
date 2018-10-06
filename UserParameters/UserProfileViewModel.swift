@@ -11,9 +11,9 @@ import Alamofire
 import AlamofireImage
 
 
-open class UserProfileViewModel {
+public class UserProfileViewModel {
     
-    open let userProfile: UserProfile
+    public let userProfile: UserProfile
     fileprivate let textFieldHandler = TextFieldHandler()
     
     public init(userProfile: UserProfile) {
@@ -26,7 +26,7 @@ open class UserProfileViewModel {
         }
     }
     
-    open var canEdit: Bool {
+    public var canEdit: Bool {
         
         get {
             

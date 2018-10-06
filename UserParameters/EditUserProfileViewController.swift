@@ -12,7 +12,7 @@ import SnapKit
 extension ImageHeaderView: ImageHeaderProtocol {}
 extension ImageLabelHeaderView: ImageLabelHeaderProtocol {}
 
-open class EditUserProfileViewController: UITableViewController {
+public class EditUserProfileViewController: UITableViewController {
     
     public enum HeaderType {
         
@@ -21,10 +21,10 @@ open class EditUserProfileViewController: UITableViewController {
         case image
     }
     
-    open var viewModel: UserProfileProtocol!
-    open var headerType: HeaderType = .none
+    public var viewModel: UserProfileProtocol!
+    public var headerType: HeaderType = .none
     
-    override open func viewDidLoad() {
+    override public func viewDidLoad() {
         
         super.viewDidLoad()
         
@@ -75,17 +75,17 @@ open class EditUserProfileViewController: UITableViewController {
         self.tableView.tableHeaderView = tableHeaderView
     }
     
-    override open func numberOfSections(in tableView: UITableView) -> Int {
+    override public func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
 
-    override open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return self.viewModel.numberOfRows
     }
     
-    override open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserProfileCell", for: indexPath) as! UserProfileCell
         cell.selectionStyle = .none

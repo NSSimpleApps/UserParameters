@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 
-open class ImageLabelHeaderView: UIView {
+public class ImageLabelHeaderView: UIView {
     
     private struct Constants {
         
@@ -19,8 +19,8 @@ open class ImageLabelHeaderView: UIView {
         public static let imageLabelGap: CGFloat = 16
     }
     
-    open let label = UILabel()
-    open let imageView = UIImageView()
+    public let label = UILabel()
+    public let imageView = UIImageView()
     
     public override init(frame: CGRect) {
         
@@ -59,7 +59,7 @@ open class ImageLabelHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    open override var intrinsicContentSize: CGSize {
+    public override var intrinsicContentSize: CGSize {
         
         let labelSize = self.label.sizeThatFits(CGSize(width: 100, height: 1000))
         

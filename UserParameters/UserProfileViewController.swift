@@ -36,12 +36,12 @@ public protocol UserProfileProtocol {
 
 extension UserProfileCell: UserParameterProtocol {}
 
-open class UserProfileViewController: UIViewController {
+public class UserProfileViewController: UIViewController {
     
-    open let button = UIButton()
-    open let editUserProfileViewController = EditUserProfileViewController(style: .grouped)
+    public let button = UIButton()
+    public let editUserProfileViewController = EditUserProfileViewController(style: .grouped)
     
-    override open func viewDidLoad() {
+    override public func viewDidLoad() {
         
         super.viewDidLoad()
         
@@ -84,11 +84,11 @@ open class UserProfileViewController: UIViewController {
             maker.bottom.equalTo(separatorContainer.top)
         }
         
-        self.addChildViewController(self.editUserProfileViewController)
-        self.editUserProfileViewController.didMove(toParentViewController: self)
+        self.addChild(self.editUserProfileViewController)
+        self.editUserProfileViewController.didMove(toParent: self)
     }
     
-    open func reloadData() {
+    public func reloadData() {
         
         self.editUserProfileViewController.tableView.reloadData()
     }

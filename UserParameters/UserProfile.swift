@@ -9,7 +9,7 @@
 import Foundation
 
 
-open class UserProfile {
+public class UserProfile {
     
     public struct Header {
         

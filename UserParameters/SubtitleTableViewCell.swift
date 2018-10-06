@@ -14,7 +14,7 @@ class SubtitleTableViewCell: UITableViewCell {
     let topLabel = UILabel()
     let bottomLabel = UILabel()
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         

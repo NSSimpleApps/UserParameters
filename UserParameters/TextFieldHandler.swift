@@ -8,17 +8,17 @@
 
 import UIKit
 
-open class TextFieldHandler: NSObject {
+public class TextFieldHandler: NSObject {
     
-    open var canEdit = false
-    open var textFieldChangedBlock: ((UITextField) -> Void)?
+    public var canEdit = false
+    public var textFieldChangedBlock: ((UITextField) -> Void)?
     
-    @objc open func textFieldChanged(_ sender: UITextField) {
+    @objc public func textFieldChanged(_ sender: UITextField) {
         
         self.textFieldChangedBlock?(sender)
     }
     
-    open func configureTextField(_ textField: UITextField) {
+    public func configureTextField(_ textField: UITextField) {
         
         textField.delegate = self
         textField.removeTarget(nil, action: nil, for: .allEvents)

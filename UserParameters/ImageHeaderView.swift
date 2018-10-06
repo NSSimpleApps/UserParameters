@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class ImageHeaderView: UIView {
+public class ImageHeaderView: UIView {
     
     private struct Constants {
         
@@ -16,7 +16,7 @@ open class ImageHeaderView: UIView {
         public static let imageBottomInset: CGFloat = 16
     }
     
-    open let imageView = UIImageView()
+    public let imageView = UIImageView()
     
     public override init(frame: CGRect) {
         
@@ -39,7 +39,7 @@ open class ImageHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    open override var intrinsicContentSize: CGSize {
+    public override var intrinsicContentSize: CGSize {
         
         var size = super.intrinsicContentSize
         size.height = Constants.imageSize.height + Constants.imageBottomInset
